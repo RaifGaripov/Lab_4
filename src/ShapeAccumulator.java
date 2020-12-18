@@ -17,7 +17,7 @@ public class ShapeAccumulator {
 
     public Shape getMaxAreaShape(){
         Shape maxAreaShape = null;
-        double minShape = -1;
+        double minShape = Double.MIN_VALUE;
         for (Shape shape: shapes){
             if(shape.calcArea() > minShape){
                 minShape = shape.calcArea();
@@ -29,7 +29,7 @@ public class ShapeAccumulator {
 
     public Shape getMinAreaShape(){
         Shape minAreaShape = null;
-        double maxShape = 999999999;
+        double maxShape = Double.MAX_VALUE;
         for (Shape shape: shapes){
             if(shape.calcArea() < maxShape){
                 maxShape = shape.calcArea();
@@ -41,7 +41,7 @@ public class ShapeAccumulator {
 
     public Shape getMaxPerimeterShape(){
         Shape maxPerimeterShape = null;
-        double min = -1;
+        double min = Double.MIN_VALUE;
         for (Shape shape : shapes) {
             if (shape.calcPerimeter() > min) {
                 min = shape.calcPerimeter();
@@ -53,7 +53,7 @@ public class ShapeAccumulator {
 
     public Shape getMinPerimeterShape(){
         Shape minPerimeterShape = null;
-        double max = 999999999;
+        double max = Double.MAX_VALUE;
         for (Shape shape : shapes) {
             if (shape.calcPerimeter() < max) {
                 max = shape.calcPerimeter();
